@@ -2,6 +2,7 @@ body
 {
   color: darkgreen;
   background: lightblue;
+  background-image:initial;
 }
 
 .heading{
