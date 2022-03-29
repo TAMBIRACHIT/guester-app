@@ -24,11 +24,13 @@ function take_snapshot(){
 
 
 
-function modelLoaded(){
-          console.log('ModelLoaded!😃');
-}
+
 console.log('ml5 version:' , ml5.version)
 classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/Agc-nmrQD/model.json');
+function modelLoaded(){
+    console.log('ModelLoaded!😃');
+}
+
 function speak(){
           var synth = window.speechSynthesis;
           speak_data="The  prediction is"+prediction;
@@ -39,7 +41,8 @@ function speak(){
 
 function check(){
           img = document.getElementById('captured_image');
-          classifier.classify(img, gotResult);
+          classify.classifier(img, gotResult);
+         
 }
 
 function gotResult(error, results){
